@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Prata');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: 'Prata';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  color: #f9fcfc;
+}
+
+h2 {
+  font-family: 'Prata';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: #021a23
+}
+
+h3 {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.wrapper {
+/*  width: 1280px;
+  margin: 0 auto;*/
+  color: #f9fcfc;
+}
+
+.page-header {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  width: 70px;   
+  z-index: 2; /*не из-за этого при движении, не не не... смотри в шапку position:fixed*/
+}
+
+.logo__name {
+  margin-right: auto;
+  font-family: 'Prata';
+  font-weight: 400;
+  font-size: 30px;
+  color: #eec643;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 75px 15px;
+  background-color: #000;
+}
+
+.main-nav__list {
+  margin: 0;
+  list-style: none;
+  font-family: 'PT Sans';
+  font-size: 15px;
+  text-transform: uppercase; 
+  color: #fff;
+  text-align: center;
+}
+
+.main-nav__item {
+  display: block;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+
+/*кнопка меню*/
+.toggle {
+  transition: all .5s;
+  position: relative;
+  width: 22px;
+  height: 24px;
+  z-index: 1;
+  background-color: transparent;
+  border: transparent;
+}
+
+.toggle:before {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  left: -4px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.toggle:after {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  left: 5px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.toggle:before {
+  top: 0;
+}
+
+.toggle:after {
+  bottom: 0;
+}
+
+.toggle span {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  width: 3px;
+  height: 100%;
+  font-size: 0;
+}
+
+.toggle span:before,
+.toggle span:after {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  background-color: #fff;
+}
+
+.toggle:hover:before,
+.toggle:hover:after {
+  opacity: 0;
+}
+
+.toggle:hover span:before {
+  transform: rotate(45deg);
+}
+
+.toggle:hover span:after {
+    transform: rotate(-45deg);
+}
+
+/*Промо*/
+.container_promo {
+  display: block;
+}
+
+.promo {
+  padding-top: 260px;
+  height: 55vh;
+  background-image: url(../image/mobile/bg_main_mb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+.promo__inner {
+  padding: 0 15px;
+  margin: 0
+}
+
+.promo__title {
+  width: 50%;
+}
+
+.promo__text {
+  padding-bottom: 85px;
+  width: 68%;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 16px; 
+  color: #f9fcfc; 
+}
+
+.trial {
+  height: 60px;
+  margin: 16px;
+  background-color: #eec643;
+}
+
+.trial__button {
+  text-align: center;
+}
+
+.trial__header {
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.directions,
+.school,
+.video {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+
+.directions__title,
+.school__title,
+.video__title,
+.contacts__title {
+  margin-bottom: 16px;
+  padding: 4px 4px;
+  border-top: solid 2px #eec643;
+  border-bottom: solid 2px #eec643;
+}
+
+.directions__item,
+.school__item,
+.video__item {
+  position: relative;
+  height: 470px;;
+  margin-bottom: 16px;
+  padding: 0; 
+}
+
+.directions__header,
+.school__header {
+  transform: rotate(-90deg);
+  position: static;
+  margin: 0;
+  margin-top: 70%
+  }
+
+.directions__list,
+.school__right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.item__header,
+.item__text {
+  margin: 0;
+  padding-left: 10px;
+  font-family: 'PT Sans';
+  color: #f9fcfc;
+}
+.item__header {
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.item__text {
+  font-size: 16px;
+  line-height: 22px;
+  padding-right: 55px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+}
+/*Направления*/
+
+.directions__item--vocal,
+.directions__item--guitar {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.directions__item--vocal {
+  background-image: url(../image/mobile/directions_card_img_2_mb.png);
+}
+
+.directions__item--guitar {
+  background-image: url(../image/mobile/directions_card_img_1_mb.png);
+}
+
+.directions__item--piano {
+  width: 75%;
+  background-image: url(../image/mobile/directions_card_img_3_mb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.directions__item--lectures {
+
+}
+
+.directions__item--other {
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #eec643;
+  color: #000;
+}
+
+.other__button {
+  color: #021a23;
+}
+
+
+
+/*О школе*/
+
+
+.school__left {
+
+}
+
+.school__right {
+
+}
+
+.school__item {
+
+}
+
+.school__item__command,
+.school__item__result {
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.school__item__command {
+  background-image: url(../image/mobile/advantages_card_img_1_mb.png);
+  background-size: cover;
+}
+
+.school__item__result {
+  background-image: url(../image/mobile/advantages_card_img_2_mb.png);
+  background-size: 100%;
+}
+
+.school__item__studio {
+  width: 75%;
+  background-image: url(../image/mobile/advantages_card_img_3_mb.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.school__item__trial {
+  display: flex;
+  width: 20%;
+    height: 468px;
+  margin: 0;
+  padding: 14px;
+  overflow: hidden;
+  background-color: #eec643;
+}
+
+/*Видео*/
+.video {
+
+}
+
+.video__inner {
+
+}
+
+.video__list {
+
+}
+
+.video__item {
+
+}
+
+.video__item--winter {
+  width: 90%;
+  margin: 0 auto;
+  height: 186px;
+}
+
+.video__item--yang,
+.video__item--summer,
+.video__item--sergey {
+  display: none;
+}
+
+.video__name {
+  margin: 0;
+  padding-top: 80px;
+  text-align: justify; 
+}
+.video__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.video__image img {
+  width: 42%;
+  min-height: 100%;
+  margin: 0px 25%;
+}
+/*Контакты*/
+.contacts {
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.contacts__inner {
+
+}
+
+.contacts__text {
+
+}
+
+.contacts__address {
+  margin: 0;
+  padding-left: 10px;
+  font-family: PT Sans;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #021a23;
+}
+
+.contacts__address a{
+  margin: 0;    
+  text-decoration: none;
+  color: #021a23;
+}
+
+.contacts__phone {
+
+}
+
+.contacts__maps {
+  width: 100%;
+  height: 220px;
+  margin-top: 16px;
+  padding: 0; 
+}
+
+.contacts__form {
+  height: 60px;
+  margin: 0;
+  background-color: #eec643;
+}
+
+/*Подвал*/
+/*.footer__inner {
+
+}
+
+.footer__block {
+
+}
+
+.footer_logo {
+
+}
+
+.footer-nav {
+
+}
+
+.footer-nav__list {
+
+}
+
+.footer-nav__item {
+
+}
+
+.footer-nav__link {
+
+}*/
+
+
+/*-----------------------------------------toggler------------*/
+
+/*----------------------------Размеры монитора-----------*/
+@media (min-width: 320px) {
+  
+}
