@@ -46,14 +46,9 @@ a {
   color: #ffff;
 }
 
-.wrapper {
-/*  width: 1280px;
-  margin: 0 auto;*/
-  color: #f9fcfc;
-}
-
 .page-header {
-  position: fixed;
+ /* position: fixed;*/
+  position: absolute;
   margin: 0 auto;
   width: 100%;
   padding: 0;
@@ -71,7 +66,7 @@ a {
 .logo {
   margin: 0;
   padding: 0;
-  width: 70px;   
+  width: 70px;
   z-index: 2; /*не из-за этого при движении, не не не... смотри в шапку position:fixed*/
 }
 
@@ -101,7 +96,7 @@ a {
   list-style: none;
   font-family: 'PT Sans';
   font-size: 15px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   color: #fff;
   text-align: center;
 }
@@ -191,8 +186,8 @@ a {
 }
 
 .promo {
-  padding-top: 260px;
-  height: 84vh;
+  padding-top: 110px;
+  height: 100%;
   background-image: url(../image/mobile/bg_main_mb.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -209,27 +204,27 @@ a {
 }
 
 .promo__text {
-  padding-bottom: 85px;
-  width: 68%;
+  padding-bottom: 15px;
+  width: 67%;
   font-family: 'PT Sans';
   font-weight: 400;
-  font-size: 16px; 
-  color: #f9fcfc; 
+  font-size: 16px;
+  color: #f9fcfc;
 }
 
 .trial {
-  height: 60px;
+  height: 45px;
   margin: 16px;
   background-color: #eec643;
 }
 
 .trial__button {
-  text-align: center;
+
 }
 
 .trial__header {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
   color: #fff;
 }
@@ -257,18 +252,26 @@ a {
 .directions__item,
 .school__item,
 .video__item {
-  position: relative;
-  height: 470px;;
-  margin-bottom: 16px;
-  padding: 0; 
+    position: relative;
+    height: 144px;
+    margin-bottom: 16px;
+    padding: 0;
 }
 
-.directions__header,
+
 .school__header {
   transform: rotate(-90deg);
-  position: static;
-  margin: 0;
-  margin-top: 70%
+  position: absolute;
+  margin: -26px;
+  top: 71%;
+  }
+
+  .directions__header {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 40px;
+    left: -22px;
+    margin: 0;
   }
 
 .directions__list,
@@ -288,8 +291,8 @@ a {
   color: #f9fcfc;
 }
 .item__header {
-  padding-top: 30px;
-  font-weight: 700;
+  padding-top: 9px;
+  font-weight: 500;
   font-size: 18px;
 }
 
@@ -357,7 +360,10 @@ a {
 }
 
 .school__item {
-
+    position: relative;
+    height: 144px;
+    margin-bottom: 16px;
+    padding: 0;
 }
 
 .school__item__command,
@@ -368,12 +374,14 @@ a {
 
 .school__item__command {
   background-image: url(../image/mobile/advantages_card_img_1_mb.png);
-  background-size: cover;
+  background-size: 100%;
+  padding: 0;
 }
 
 .school__item__result {
   background-image: url(../image/mobile/advantages_card_img_2_mb.png);
   background-size: 100%;
+  padding: 0;
 }
 
 .school__item__studio {
@@ -381,12 +389,13 @@ a {
   background-image: url(../image/mobile/advantages_card_img_3_mb.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  padding: 0;
 }
 
 .school__item__trial {
   display: flex;
   width: 20%;
-    height: 468px;
+    height: 144px;
   margin: 0;
   padding: 14px;
   overflow: hidden;
@@ -410,6 +419,27 @@ a {
 
 }
 
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  color: transparent;
+  overflow: hidden;
+  border: 0;
+  background: #ff0;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
 .video__item--winter {
   width: 90%;
   margin: 0 auto;
@@ -424,9 +454,8 @@ a {
 
 .video__name {
   margin: 0;
-  padding-top: 80px;
-  text-align: justify; 
 }
+
 .video__image {
   position: absolute;
   top: 0;
@@ -434,17 +463,19 @@ a {
   right: 0;
   bottom: 0;
   z-index: 0;
+  background-image: url(../image/video_card_img_1.png);
 }
-
+/*
 .video__image img {
   width: 42%;
   min-height: 100%;
   margin: 0px 25%;
 }
+*/
 /*Контакты*/
 .contacts {
   margin: 0 auto;
-  padding: 30px 16px;
+  padding: 0 16px;
 }
 
 .contacts__inner {
@@ -466,25 +497,33 @@ a {
 }
 
 .contacts__address a{
-  margin: 0;    
+  margin: 0;
   text-decoration: none;
   color: #021a23;
 }
 
 .contacts__phone {
-
+  margin: 0;
+  padding-left: 10px;
+  font-family: PT Sans;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #021a23;
 }
 
 .contacts__maps {
   width: 100%;
   height: 220px;
   margin-top: 16px;
-  padding: 0; 
+  padding: 0;
+  background-repeat: no-repeat;
 }
 
 .contacts__form {
-  height: 60px;
-  margin: 0;
+  height: 40px;
+  margin: 5%;
+  margin-top: 5%;
   background-color: #eec643;
 }
 
@@ -521,8 +560,37 @@ a {
 /*-----------------------------------------toggler------------*/
 
 /*----------------------------Размеры монитора-----------*/
-@media (min-width: 320px) {
-  
+@media (max-width: 300px) {
+.directions__item--vocal {
+  background-image: url(../image/directions_card_img_2png);
+}
+
+.directions__item--guitar {
+  background-image: url(../image/directions_card_img_1.png);
+}
+
+.directions__item--piano {
+  width: 75%;
+  background-image: url(../image/directions_card_img_3.png);
+  background-repeat: no-repeat;
+}
+
+.school__item__command {
+  background-image: url(../image/advantages_card_img_1.png);
+  background-repeat: no-repeat;
+}
+
+.school__item__result {
+  background-image: url(../image/advantages_card_img_2.png);
+  background-repeat: no-repeat;
+}
+
+.school__item__studio {
+  width: 75%;
+  background-image: url(../image/advantages_card_img_3.png);
+  background-repeat: no-repeat;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -532,23 +600,25 @@ a {
   }
 
   .main-nav {
-    display: none; 
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 75px 15px;
+    padding-bottom: 10px;
     background-color: #000;
   }
 
   .main-nav__list {
-  margin: 0;
-  list-style: none;
-  font-family: 'PT Sans';
-  font-size: 15px;
-  text-transform: uppercase; 
-  color: #fff;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'PT Sans';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
   }
 
   .main-nav__item {

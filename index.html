@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/slick.css">
   <link rel="stylesheet" href="style/style.css">
-
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<e1b78916-58e8-4d08-9ce0-f4a8cdd244f4>" type="text/javascript"></script>
 </head>
 <body>
 
-    
+
   <header class="page-header">
     <div class="container">
       <div class="logo">
         <a class="logo__name">Diez</a>
       </div>
-
       <div class="menu">
         <nav class="main-nav j-mobile-nav" id="main-nav">
-          
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#directions">Направления</a>
@@ -46,8 +46,7 @@
     </div>
   </header>
 
-  <div class="wrapper">
-
+  <main>
     <section class="promo">
       <div class="promo__inner">
         <h1 class="promo__title">Школа музыкального искуства</h1>
@@ -62,7 +61,7 @@
         </a>
       </div>
     </section>
-    
+
     <section class="directions" id="directions">
 <!--       <div class="directions__inner"> -->
 
@@ -134,56 +133,22 @@
               </a>
             </article>
           </div>
-          
+
 <!--         </div> -->
       </section>
 
       <section class="video" id="video">
 <!--         <div class="video__inner"> -->
-
             <h2 class="video__title">В стенах школы</h2>
-            <div class="video__list" id="slider">
-              
+            <div id="slider" class="video__list">
               <article class="video__item video__item--winter">
-                <picture class="video__image">
-                  <img src="image/video_card_img_1.png" alt="">
-                </picture>
-                <div class="video__name">
-                  <h3 class="item__header">Зимняя вишня</h3>
-                  <p class="item__text">Финальный концерт 2018 года</p>
+                <div class="video__image">
+                  <div class="video__name">
+                    <h3 class="item__header">Зимняя вишня</h3>
+                    <p class="item__text">Финальный концерт 2018 года</p>
+                  </div>
                 </div>
               </article>
-
-              <article class="video__item video__item--yang">
-                <picture class="video__image">
-                  <img src="image/video_card_img_2.png" alt="">
-                </picture>
-                <div class="video__name">
-                  <h3 class="item__header">Янг Чжо</h3>
-                  <p class="item__text">Репетиция сольной партии скрипки</p> 
-                </div>
-              </article>
-
-              <article class="video__item video__item--summer">
-                <picture class="video__image">
-                  <img src="image/video_card_img_3.png" alt="">
-                </picture>
-                <div class="video__name">
-                  <h3 class="item__header">Летний штиль</h3>
-                  <p class="item__text">За кулисами концера</p>
-                </div>
-              </article>
-
-              <article class="video__item video__item--sergey">
-                <picture class="video__image">
-                  <img src="image/video_card_img_4.png" alt="">
-                </picture>
-                <div class="video__name">
-                  <h3 class="item__header">Сергей Трофимов</h3>
-                  <p class="item__text">ЛЮБЭ — Выйду в поле с конем</p>
-                </div>
-              </article>
-
             </div>
 <!--         </div> -->
       </section>
@@ -194,15 +159,15 @@
             <div class="contacts__address">СПб, 6-я Линия ВО 42</div>
             <div class="contacts__phone">+7 (812) 566 56 56</div>
           </div>
-          <div class="contacts__maps" id="maps">
-            <img src="image/mobile/map_mb.png" alt="">
-          </div>
+          <div class="contacts__maps" id="contacts__maps"></div>
+
           <div class="contacts__form">
             <a href="#" class="trial__button">
-              <h4 class="item__header">Вводный урок</h4>
+              <h4 class="trial__header">Вводный урок</h4>
             </a>
           </div>
       </section>
+  </main>
 
 <!--       <footer>
         <div class="container">
@@ -229,17 +194,12 @@
                     <a class="footer-nav__link" href="#">Vkontakte</a>
                   </li>
 
-                </ul>            
+                </ul>
             </div>
 
             </div>
         </div>
       </footer> -->
-
-  </div> <!-- ТУТ КОНЧАЕТСЯ ВРАППЕР -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/script.js"></script>
 
 </body>
 </html>
