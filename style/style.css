@@ -94,7 +94,6 @@ a {
   left: 0;
   width: 100%;
   padding: 75px 15px;
-  background-color: #000;
 }
 
 .main-nav__list {
@@ -114,7 +113,7 @@ a {
 }
 
 
-/*кнопка меню*/
+/*кнопка меню*//*
 .toggle {
   transition: all .5s;
   position: relative;
@@ -185,7 +184,7 @@ a {
 .toggle:hover span:after {
     transform: rotate(-45deg);
 }
-
+*/
 /*Промо*/
 .container_promo {
   display: block;
@@ -193,7 +192,7 @@ a {
 
 .promo {
   padding-top: 260px;
-  height: 55vh;
+  height: 84vh;
   background-image: url(../image/mobile/bg_main_mb.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -524,4 +523,109 @@ a {
 /*----------------------------Размеры монитора-----------*/
 @media (min-width: 320px) {
   
+}
+
+@media (max-width: 767px) {
+  .menu {
+  margin: 0;
+  padding: 0;
+  }
+
+  .main-nav {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 75px 15px;
+    background-color: #000;
+  }
+
+  .main-nav__list {
+  margin: 0;
+  list-style: none;
+  font-family: 'PT Sans';
+  font-size: 15px;
+  text-transform: uppercase; 
+  color: #fff;
+  text-align: center;
+  }
+
+  .main-nav__item {
+    display: block;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+
+.toggle {
+  transition: all .5s;
+  position: relative;
+  width: 22px;
+  height: 24px;
+  z-index: 1;
+  background-color: transparent;
+  border: transparent;
+}
+
+.toggle:before {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  left: -4px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.toggle:after {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  left: 5px;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.toggle:before {
+  top: 0;
+}
+
+.toggle:after {
+  bottom: 0;
+}
+
+.toggle span {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  width: 3px;
+  height: 100%;
+  font-size: 0;
+}
+
+.toggle span:before,
+.toggle span:after {
+  transition: all .5s;
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  background-color: #fff;
+}
+
+.toggle:hover:before,
+.toggle:hover:after {
+  opacity: 0;
+}
+
+.toggle:hover span:before {
+  transform: rotate(45deg);
+}
+
+.toggle:hover span:after {
+    transform: rotate(-45deg);
+}
+
 }
